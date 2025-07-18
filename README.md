@@ -1,10 +1,31 @@
 
 # Fashion Product Images Prediction
 
-## Overview
-This repository contains code for a deep learning model that predicts fashion product attributes (such as color, type, season, and gender) from product images. The model is trained on the Fashion Product Images dataset and includes scripts for training, inference, and a Streamlit-based web UI for image prediction.
+## 📌 Overview
+This project builds a deep learning model that predicts **four attributes** from fashion product images:
+- 🎨 Color  
+- 👕 Product Type  
+- 🌤️ Season  
+- 🚻 Gender  
+
+The model uses a **multi-output CNN architecture with a ResNet backbone**, trained on the [Fashion Product Images dataset](https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-small).
+
+The repo also includes:
+- A **FastAPI** backend (`api/main.py`) for inference.
+- A **Streamlit web UI** (`ui/app.py`) for image uploads and prediction display.
+
 
 ---
+
+## 🧠 Model Details
+
+- **Backbone**: ResNet50 (pretrained on ImageNet)
+- **Outputs**: 4 independent fully connected layers (one per label)
+- **Loss**: CrossEntropy for each output
+- **Framework**: PyTorch
+
+---
+
 
 ## Key Files
 
@@ -29,6 +50,8 @@ This repository contains code for a deep learning model that predicts fashion pr
 ## Downloading and loading the model
 - Download the model from https://drive.google.com/file/d/1BOtH3abvEUHz4scR35o2EHO-2xsbq88C/view?usp=sharing
 - paste the path of model in line 71 in api/main.py
+   ``` python
+  model.load_state_dict(torch.load("output_models/best_model.pth", map_location=device))
 
 ---
 
