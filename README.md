@@ -75,6 +75,17 @@ streamlit run ui/app.py
 Open the Streamlit app in your browser (usually at http://localhost:8501). Upload an image, and the model will predict fashion attributes by querying the API.
 
 
+## Exploratory Data Analysis (EDA)
+
+We performed extensive EDA to understand the dataset and prepare it for model training. The key insights include:
+
+- Distribution plots for attributes: `gender`, `baseColour`, `articleType`, `season`
+- Detection and handling of missing or inconsistent labels
+- Class imbalance visualization
+- Attribute correlation plots (e.g., gender vs articleType)
+- Sample image previews for visual understanding
+
+You can view the full EDA in the [`EDA.ipynb`](./EDA.ipynb) notebook.
 
 
 
