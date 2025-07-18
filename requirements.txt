@@ -1,0 +1,11 @@
+torch
+uvicorn
+flask
+fastapi
+pandas
+numpy
+scikit-learn
+torchvision
+tqdm
+streamlit
+requests
